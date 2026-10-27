@@ -1,0 +1,45 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Modern 30BB Business Blueprint Plugin Logo (256x256, 8 Pillars + 30 Master Sections Emblem) -->
+  <defs>
+    <linearGradient id="bgGrad30" x1="24" y1="24" x2="232" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="55%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="goldAccent30" x1="64" y1="56" x2="192" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="glow30" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Blueprint Shield -->
+  <rect x="24" y="24" width="208" height="208" rx="38" fill="url(#bgGrad30)" stroke="#60A5FA" stroke-width="2.5"/>
+
+  <!-- Architectural Blueprint Grid -->
+  <path d="M24 88H232M24 128H232M24 168H232M88 24V232M128 24V232M168 24V232" stroke="#93C5FD" stroke-opacity="0.14" stroke-width="1.25" stroke-dasharray="4 4"/>
+
+  <!-- Octagonal Ring Representing the 8 Strategic Pillars -->
+  <polygon points="128,44 187,69 212,128 187,187 128,212 69,187 44,128 69,69" fill="none" stroke="url(#goldAccent30)" stroke-width="3" filter="url(#glow30)"/>
+
+  <!-- 8 Pillar Nodes -->
+  <circle cx="128" cy="44" r="5.5" fill="#FDE047" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="187" cy="69" r="5.5" fill="#FDE047" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="212" cy="128" r="5.5" fill="#FDE047" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="187" cy="187" r="5.5" fill="#FDE047" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="128" cy="212" r="5.5" fill="#FDE047" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="69" cy="187" r="5.5" fill="#FDE047" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="44" cy="128" r="5.5" fill="#FDE047" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="69" cy="69" r="5.5" fill="#FDE047" stroke="#0F172A" stroke-width="2"/>
+
+  <!-- Inner Core Hexagon Plate -->
+  <polygon points="128,70 178,99 178,157 128,186 78,157 78,99" fill="#0F172A" fill-opacity="0.78" stroke="#60A5FA" stroke-width="2"/>
+
+  <!-- "30" Typography & "BB" Sub-label -->
+  <text x="128" y="129" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="44" letter-spacing="1">30</text>
+  <text x="128" y="156" text-anchor="middle" fill="#FBBF24" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="18" letter-spacing="4">BLUEPRINT</text>
+</svg>

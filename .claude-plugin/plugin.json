@@ -1,0 +1,16 @@
+{
+  "name": "modern-30bb-plugin",
+  "displayName": "Modern 30BB Business Blueprint",
+  "version": "1.0.0",
+  "description": "Framework executivo e orquestrador para construção de Planos Mestres de Negócios (Master Business Blueprints) estruturados em 30 Seções Mestras (I a XXX) distribuídas em 8 Pilares Estratégicos.",
+  "author": {
+    "name": "Halcyon Tech",
+    "url": "https://github.com/HalcyonTech-LTDA"
+  },
+  "homepage": "https://github.com/HalcyonTech-LTDA/modern-30bb-plugin",
+  "repository": "https://github.com/HalcyonTech-LTDA/modern-30bb-plugin",
+  "license": "MIT",
+  "skills": [
+    "./claude/skills/"
+  ]
+}
