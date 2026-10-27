@@ -55,8 +55,14 @@ O **Modern 30BB Plugin** consolida os 46 tópicos executivos clássicos de conce
 ### 1. Regra de Guardrails e Roteamento (`rules/modern-30bb-blueprint-standards.md`)
 Carregada sob demanda (`trigger: model_decision`) para preservar a janela de contexto do agente, impondo os **9 Invariantes Inegociáveis** do padrão 30BB e roteando automaticamente cada tarefa para a skill especializada correspondente.
 
-### 2. Agente Especialista (`agents/modern_30bb_architect_agent.md`)
-Define a persona e o protocolo de execução do **Modern 30BB Business Blueprint Architect Agent** (`modern-30bb-architect-agent`).
+### 2. Squad Multi-Agentes de Especialistas (`agents/`)
+Define a equipe especializada de agentes para orquestração ponta a ponta e redação de cada pilar com rigor institucional:
+- **`modern-30bb-architect-agent`** (`agents/modern_30bb_architect_agent.md`): Orquestrador Líder e Integrador Raiz, coordena o pipeline em 6 etapas e executa a homologação final.
+- **`modern-30bb-thesis-agent`** (`agents/modern_30bb_thesis_agent.md`): Subagente de Tese e Marca (Pilares 1 e 4: Seções I a III e XIV a XV).
+- **`modern-30bb-product-agent`** (`agents/modern_30bb_product_agent.md`): Subagente de Plataforma, Wedge, Expansão e Precificação (Pilares 2 e 3: Seções IV a XIII).
+- **`modern-30bb-gtm-agent`** (`agents/modern_30bb_gtm_agent.md`): Subagente de Go-To-Market Enterprise, CRM de 14 etapas e CS Escalável (Pilar 7: Seções XXIV a XXVII).
+- **`modern-30bb-governance-agent`** (`agents/modern_30bb_governance_agent.md`): Subagente de Blindagem Societária 100% IP, Acordo de Acionistas, SDLC Zero-Forks e Compliance (Pilares 5 e 6: Seções XVI a XXIII).
+- **`modern-30bb-finance-agent`** (`agents/modern_30bb_finance_agent.md`): Subagente de DRE Gerencial, Painel de KPIs, Financiamento por 4 Gates e Moat (Pilar 8: Seções XXVIII a XXX).
 
 ### 3. As 6 Skills Especializadas (`skills/`)
 
@@ -109,7 +115,12 @@ modern-30bb-plugin/
 ├── assets/
 │   └── logo.svg
 ├── agents/
-│   └── modern_30bb_architect_agent.md
+│   ├── modern_30bb_architect_agent.md
+│   ├── modern_30bb_thesis_agent.md
+│   ├── modern_30bb_product_agent.md
+│   ├── modern_30bb_gtm_agent.md
+│   ├── modern_30bb_governance_agent.md
+│   └── modern_30bb_finance_agent.md
 ├── rules/
 │   └── modern-30bb-blueprint-standards.md
 └── skills/
