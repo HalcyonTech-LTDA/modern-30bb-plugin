@@ -4,6 +4,33 @@ Um plugin profissional para o **Antigravity** projetado para estruturar, redigir
 
 ---
 
+## Instalação / Installation
+
+### Antigravity
+
+Instale diretamente no Antigravity via CLI:
+
+```bash
+agy plugin install https://github.com/HalcyonTech-LTDA/modern-30bb-plugin
+```
+
+Verifique se o plugin está instalado e ativo:
+
+```bash
+agy plugin list
+```
+
+### Claude Code
+
+Adicione o marketplace da Halcyon Tech uma única vez e instale o plugin:
+
+```text
+/plugin marketplace add HalcyonTech-LTDA/halcyon-plugins
+/plugin install modern-30bb-plugin@halcyon-plugins
+```
+
+---
+
 ## Visão Geral: O Padrão 30BB (30 Seções Mestras em 8 Pilares)
 
 Planos de negócios tradicionais costumam falhar por dois extremos: ou são resumos superficiais de *pitch deck* que ignoram blindagem societária, arquitetura técnica, limites de fornecedores e *unit economics*, ou são documentos prolixos e repetitivos com dezenas de tópicos desconexos.
