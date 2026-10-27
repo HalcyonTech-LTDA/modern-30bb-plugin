@@ -33,47 +33,94 @@ O objetivo do documento gerado nunca é ser um resumo superficial de ideias, mas
 
 ---
 
-## Procedimento Passo a Passo de Execução
+## Procedimento de Execução Multi-Agentes (Staged Handoff Pipeline)
 
-### Passo 1: Dissecação da Ideia de Negócio (Intake & Diagnóstico)
-Ao receber uma ideia de negócio (mesmo que em poucas frases, áudio transcrito, e-mail ou rascunho):
-1. Extraia os **7 Vetores Fundacionais**:
-   - **Setor Inicial (*Beachhead*)**: Onde a dor é mais urgente, regulada, volumosa e com orçamento disponível?
-   - **Paradoxo do Mercado**: O que os clientes já contratam hoje que continua falhando na "última milha"?
-   - **Objeto Econômico Real**: O que a empresa realmente monitora, decide ou orquestra (além do insumo aparente)?
-   - **Core Platform (Motor Horizontal)**: Quais são as 6 camadas técnicas reutilizáveis?
-   - **Produto 1 (*Wedge Product*)**: Qual problema cirúrgico abre a porta do cliente no Dia 1?
-   - **Comprador Econômico e Multiplicadores**: Quem são os agregadores de volume e os decisores (CEO/CFO/CRO/CTO)?
-   - **North Star**: Qual infraestrutura padrão de mercado a empresa se torna em 5 a 10 anos?
-2. Consulte o template mestre preenchível em [master-30bb-template.md](./resources/master-30bb-template.md) e o mapa de consolidação em [architecture-map-30-sections.md](./references/architecture-map-30-sections.md).
+Para evitar dependências circulares e assegurar que nenhum agente opere sem o contexto consolidado das etapas anteriores, a geração completa do Blueprint adota obrigatoriamente o **Pipeline em Fases de Entrega de Bastão (Staged Handoff)**:
 
-### Passo 2: Síntese Modular pelos 8 Pilares Estratégicos
-Construa o documento respeitando rigorosamente a numeração romana (`### I.` até `### XXX.`) e acionando as skills especializadas de cada domínio:
+```text
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                   FLUXO MULTI-AGENTES DE ENTREGA DE BASTÃO                       │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│ Fase 0: Orquestrador Líder (Extrai os 7 Vetores Fundacionais)                     │
+│                            ↓                                                     │
+│ Fase 1: Subagente Tese & Marca (Pilares 1 e 4: Seções I-III e XIV-XV)             │
+│         [Insumo gerado: Problema, Antiposicionamento, Categoria, Mantra e Naming]│
+│                            ↓                                                     │
+│ Fase 2: Subagente Produto & Monetização (Pilares 2 e 3: Seções IV-XIII)           │
+│         [Insumo gerado: Core Platform, Beachhead, Wedge, Custos e Pricing 6L]    │
+│                            ↓                                                     │
+│ Fase 3 (Execução Paralela Segura):                                               │
+│         ├─ Subagente GTM & Vendas (Pilar 7: XXIV-XXVII)                          │
+│         └─ Subagente Governança & Operações (Pilares 5 e 6: XVI-XXIII)           │
+│         [Insumos gerados: 50 Contas, Funil 14E, CS, 100% IP, SHA M0 e SDLC]      │
+│                            ↓                                                     │
+│ Fase 4: Subagente Finanças & Moat (Pilar 8: XXVIII-XXX)                          │
+│         [Insumo gerado: DRE Gerencial Software/Repasse, KPIs, 4 Gates e Moat]    │
+│                            ↓                                                     │
+│ Fase 5: Orquestrador Líder (Compilação, Auditoria Python e Homologação)          │
+└──────────────────────────────────────────────────────────────────────────────────┘
+```
 
-1. **Pilares 1 e 4 (`modern-30bb-thesis-and-brand`)**:
-   - Redija as **Seções I, II e III** (Paradoxo, Matriz do Status Quo, Ciclo de 6 etapas, Antiposicionamento, Categoria, Cadeia de Valor `INSUMO BRUTO → SINAL → CONTEXTO → DECISÃO → AÇÃO → EVIDÊNCIA`, Verdadeiro Objeto Econômico e Mantra).
-   - Redija as **Seções XIV e XV** (Públicos da marca, Restrição semântica proibindo termos do nicho inicial no nome corporativo, Territórios de Naming avaliados + 1 descartado por conflito + validação INPI/USPTO, Elevator Pitch e Taglines).
-2. **Pilar 2 (`modern-30bb-product-and-expansion`)**:
-   - Redija as **Seções IV a XI** (Diagrama em 3 níveis `CORPORATE BRAND → CORE PLATFORM → SOLUTIONS`, Beachhead com os 4 critérios raros e cálculo de SOM/SAM/TAM, Produto 1 e dinâmica operacional, Precauções tecnológicas e Matriz de 3 riscos operacionais, Land & Expand com Módulos 2 a 6, Tabela de Expansão Horizontal com 5+ novas verticais, Motor de Otimização de Custos em cascata + Equação de ROI Anual + 6 Pilares de Valor, e Visão de Longo Prazo / Marketplace).
-3. **Pilares 3 e 7 (`modern-30bb-monetization-and-gtm`)**:
-   - Redija as **Seções XII e XIII** (Tabela de 6 componentes de receita — *Platform Fee, Monitoring/Entity Fee, Usage/Decision Fee, Consumption Margin, Additional Modules, Implementation Fee* — e as 2 modalidades de empacotamento comercial: *Monitoramento Contínuo* e *Motor Transacional via API*).
-   - Redija as **Seções XXIV a XXVII** (Prioridade de ICP começando por Agregadores + Segunda Onda, *Founder-Led Sales*, 50 *Target Accounts*, Comitê de Compra, Esteira de 14 etapas no CRM, 3 Ondas de Canais, Marketing de Autoridade `CREDIBILITY → EDUCATION → DEMAND` e CS Escalável com a Lei Fundamental de Escalabilidade Operacional).
-4. **Pilares 5 e 6 (`modern-30bb-governance-ops-and-legal`)**:
-   - Redija as **Seções XVI a XVIII** (Propriedade Integral 100% IP, Governança sobre Parceiros de Desenvolvimento `[PARCEIRO] desenvolve; [COMPANHIA] possui`, Linha de Comando sem Conselho Ornamental, Rito Mensal de 10 blocos encerrando em `Decisão → Responsável Nominal → Prazo Fatal`, e Acordo de Acionistas assinado no Mês 0 cobrindo os 5 blocos societários).
-   - Redija as **Seções XIX a XXIII** (Organograma enxuto com Produto 100% interno, Política de sede híbrida, Cultura empresarial de alta performance + Remuneração Fixo/Variável/SOP seletivo, Esteira formal de SDLC de 10 etapas + Regra Anti-Customização Zero-Forks, Cibersegurança com prontidão LGPD/ISO 27001/SOC 2 Tipo II, e Checklist de Blindagem Jurídica).
-5. **Pilar 8 (`modern-30bb-economics-roadmap-and-moat`)**:
-   - Redija as **Seções XXVIII a XXX** (DRE Gerencial segregando Receita Bruta, COGS e Margem Bruta como termômetro Software vs. Revenda, Painel Mensal de KPIs em 6 dimensões, Financiamento em 4 Gates de Redução de Risco com 12–18m de Runway, Master Roadmap Integrado de 18 Meses em 5 Fases M0–M18, Renúncias Estratégicas Inegociáveis, Fotografia de 18 Meses, Flywheel de 7 efeitos da Tese de Investimento, Moat de 8 fatores e Manifesto Empresarial).
+### Passo 0: Dissecação da Ideia de Negócio (Intake pelo Orquestrador)
+O Orquestrador Líder analisa a ideia do usuário e extrai a **Ficha de Parâmetros Globais (7 Vetores Fundacionais)**:
+1. **Setor Inicial (*Beachhead*)**: Onde a dor é mais urgente, regulada e volumosa?
+2. **Paradoxo do Mercado**: O que os clientes já contratam que continua falhando na última milha?
+3. **Objeto Econômico Real**: O que a empresa realmente decide/orquestra além do insumo bruto?
+4. **Core Platform (Motor Horizontal)**: As 6 camadas técnicas reutilizáveis.
+5. **Produto 1 (*Wedge Product*)**: A cunha comercial cirúrgica que abre a porta no Dia 1.
+6. **Comprador Econômico e Multiplicadores**: Agregadores de volume e decisores.
+7. **North Star**: A infraestrutura padrão em 5 a 10 anos.
 
-### Passo 3: Verificação e Auditoria Automatizada
-Sempre que gerar ou atualizar um arquivo de Blueprint em disco, execute o script validador oficial da skill para garantir que nenhuma das 30 seções, 8 pilares, tabelas ou fórmulas obrigatórias foi omitida ou deixada com placeholders (`[...]`):
+---
+
+### Passo 1: Disparo da Fase 1 — Tese, Categoria e Naming
+Invoque o subagente especializado (`modern-30bb-thesis-agent` ou subagente `self` com a skill `modern-30bb-thesis-and-brand`):
+- **Missão:** Redigir as **Seções I a III (Pilar 1)** e as **Seções XIV a XV (Pilar 4)**.
+- **Insumo Passado no Prompt:** A Ficha de Parâmetros Globais do Passo 0.
+- **Entrega Esperada:** O Paradoxo de Mercado, a Matriz do Status Quo, o Antiposicionamento, a Cadeia de Valor `[INSUMO BRUTO] → [SINAL] → [CONTEXTO] → [DECISÃO] → [AÇÃO] → [EVIDÊNCIA]`, a Nova Categoria, o Mantra Corporativo e o Naming Institucional validado (com restrição semântica proibindo termos do nicho inicial).
+
+---
+
+### Passo 2: Disparo da Fase 2 — Arquitetura de Produto e Monetização
+Invoque o subagente especializado (`modern-30bb-product-agent` ou subagente `self` com as skills `modern-30bb-product-and-expansion` e `modern-30bb-monetization-and-gtm`):
+- **Missão:** Redigir as **Seções IV a XI (Pilar 2)** e as **Seções XII e XIII (Pilar 3)**.
+- **Insumo Passado no Prompt:** A Ficha de Parâmetros Globais + As Seções I a III e XIV a XV redigidas na Fase 1.
+- **Entrega Esperada:** Desacoplamento técnico em 3 níveis (`Marca → Core Platform 6 camadas → Soluções`), Beachhead quantificado (SOM, SAM, TAM), Produto 1 Wedge, Precauções técnicas, Land & Expand vertical, Expansão horizontal, Calculadora de ROI do CFO com 6 pilares de valor, Tabela de Precificação em 6 Linhas e Empacotamento MaaS vs DaaS.
+
+---
+
+### Passo 3: Disparo da Fase 3 em Paralelo Seguro — GTM & Governança/Operações
+Com o Produto e a Precificação formalmente congelados, dispare simultaneamente dois subagentes:
+
+1. **Subagente GTM & Vendas (`modern-30bb-gtm-agent`):**
+   - **Missão:** Redigir as **Seções XXIV a XXVII (Pilar 7)**.
+   - **Insumo:** O pacote de Produto e Precificação da Fase 2.
+   - **Entrega:** ICP Enterprise priorizando Agregadores, Comitê de Compra mapeado, 50 Target Accounts nominais/categorizadas, Esteira de CRM em 14 etapas, 3 Ondas de Canais, Marketing de Autoridade e CS com Lei Fundamental de Escalabilidade Operacional.
+
+2. **Subagente Governança & Operações (`modern-30bb-governance-agent`):**
+   - **Missão:** Redigir as **Seções XVI a XVIII (Pilar 5)** e as **Seções XIX a XXIII (Pilar 6)**.
+   - **Insumo:** A estrutura da Core Platform e custos operacionais da Fase 2.
+   - **Entrega:** Blindagem patrimonial de 100% de IP (`[PARCEIRO] desenvolve; [COMPANHIA] possui`), Rito mensal executivo de 10 blocos sem conselho ornamental, Acordo de Acionistas no Mês 0 (5 blocos), Organograma enxuto e sede híbrida, SDLC formal de 10 etapas com Regra Anti-Customização (Zero Forks), Cibersegurança e Checklist Jurídico.
+
+---
+
+### Passo 4: Disparo da Fase 4 — Economia, Finanças, Execução e Moat
+Invoque o subagente financeiro (`modern-30bb-finance-agent` ou subagente `self` com a skill `modern-30bb-economics-roadmap-and-moat`):
+- **Missão:** Redigir as **Seções XXVIII a XXX (Pilar 8)**.
+- **Insumo Passado no Prompt:** A totalidade dos dados consolidados das Fases 1, 2 e 3 (tabelas de preços, custos de APIs/terceiros, volume de vendas, headcount técnico/comercial e cronograma).
+- **Entrega Esperada:** DRE Gerencial segregando Software de Repasse de Terceiros (com Margem Bruta como termômetro de identidade), Painel de KPIs em 6 dimensões, Financiamento por 4 Gates de Redução de Risco (12–18m runway), Master Roadmap Integrado de 18 Meses em 5 Fases M0–M18, Renúncias Estratégicas ("O Que NÃO Faremos"), Flywheel da Tese de Investimento, Moat de 8 fatores e Manifesto Empresarial.
+
+---
+
+### Passo 5: Compilação, Auditoria Automatizada e Homologação
+O Orquestrador Líder reúne as seções geradas, monta o documento Markdown consolidado no disco e executa o validador oficial:
 
 ```bash
 python3 ~/.gemini/config/plugins/modern-30bb-plugin/skills/modern-30bb-orchestrator/scripts/validate_30bb_blueprint.py <caminho/para/blueprint.md>
 ```
 
-> [!TIP]
-> Se o objetivo for gerar um **Template em Branco Preenchível**, passe a flag `--allow-placeholders` para o script validador:
-> `python3 ~/.gemini/config/plugins/modern-30bb-plugin/skills/modern-30bb-orchestrator/scripts/validate_30bb_blueprint.py <caminho/para/template.md> --allow-placeholders`
+> [!IMPORTANT]
+> O Orquestrador só encerra a tarefa após o script validador retornar código de saída 0 (sucesso total). Se houver qualquer pendência, o Orquestrador solicita a retificação cirúrgica ao subagente responsável antes de finalizar a resposta ao usuário.
 
 ---
 
