@@ -1,32 +1,35 @@
-# Modern 30BB Business Blueprint Plugin (`modern-30bb-plugin`)
+<div align="center">
 
-Um plugin profissional para o **Antigravity** projetado para estruturar, redigir, refinar e auditar **Planos Mestres de Negócios (Master Business Blueprints)** completos a partir de qualquer nova ideia de negócio, tese de investimento ou rascunho executivo, utilizando a arquitetura canônica de **30 Seções Mestras (I a XXX)** distribuídas em **8 Pilares Estratégicos**.
+# Modern 30BB Business Blueprint Plugin
+### 30-Day Business Blueprint Engine & Strategic Formulation Architecture
+
+[![Antigravity Plugin](https://img.shields.io/badge/Antigravity-Plugin%20v1.0.0-4F46E5.svg)](https://antigravity.google)
+[![License: MIT](https://img.shields.io/badge/License-MIT-10B981.svg)](./LICENSE)
+[![Organization](https://img.shields.io/badge/Organization-HalcyonTech--LTDA-black.svg)](https://github.com/HalcyonTech-LTDA)
+
+<p align="center">
+  <b>Framework executivo e orquestrador para construção de Planos Mestres de Negócios (Master Business Blueprints) estruturados em 30 Seções Mestras (I a XXX) distribuídas em 8 Pilares Estratégicos: Fundamentos da Tese e Categoria, Arquitetura de Plataforma Horizontal, Cunha de Entrada (Beachhead & Wedge) e Expansão (Land & Expand / Horizontal), Monetização em 6 Camadas e Empacotamento (MaaS / DaaS), Branding e Naming Institucional, Blindagem Societária (100% IP e Acordo de Acionistas de 5 Blocos), Organização Enxuta, SDLC Anti-Customização e Cibersegurança (LGPD/SOC 2/ISO 27001), Go-To-Market Enterprise (50 Target Accounts, Funil de 14 Etapas e 3 Ondas de Canais), DRE Gerencial, Painel de KPIs, Financiamento por 4 Gates, Master Roadmap de 18 Meses, Fosso Competitivo (Moat) e Manifesto Empresarial.</b>
+</p>
+
+</div>
 
 ---
 
-## Instalação / Installation
+## Installation & Verification
 
-### Antigravity
+### Antigravity CLI (`agy`)
 
-Instale diretamente no Antigravity via CLI:
+Install directly into your Antigravity environment via the CLI:
 
 ```bash
 agy plugin install https://github.com/HalcyonTech-LTDA/modern-30bb-plugin
 ```
 
-Verifique se o plugin está instalado e ativo:
+Verify that the plugin is active and adheres to the strict official schema:
 
 ```bash
 agy plugin list
-```
-
-### Claude Code
-
-Adicione o marketplace da Halcyon Tech uma única vez e instale o plugin:
-
-```text
-/plugin marketplace add HalcyonTech-LTDA/halcyon-plugins
-/plugin install modern-30bb-plugin@halcyon-plugins
+agy plugin validate --strict ./modern-30bb-plugin
 ```
 
 ---
@@ -50,36 +53,6 @@ O **Modern 30BB Plugin** consolida os 46 tópicos executivos clássicos de conce
 
 ---
 
-## Componentes do Plugin
-
-### 1. Regra de Guardrails e Roteamento (`rules/modern-30bb-blueprint-standards.md`)
-Carregada sob demanda (`trigger: model_decision`) para preservar a janela de contexto do agente, impondo os **9 Invariantes Inegociáveis** do padrão 30BB e roteando automaticamente cada tarefa para a skill especializada correspondente.
-
-### 2. Squad Multi-Agentes de Especialistas (`agents/`)
-Define a equipe especializada de agentes para orquestração ponta a ponta e redação de cada pilar com rigor institucional:
-- **`modern-30bb-architect-agent`** (`agents/modern_30bb_architect_agent.md`): Orquestrador Líder e Integrador Raiz, coordena o pipeline em 6 etapas e executa a homologação final.
-- **`modern-30bb-thesis-agent`** (`agents/modern_30bb_thesis_agent.md`): Subagente de Tese e Marca (Pilares 1 e 4: Seções I a III e XIV a XV).
-- **`modern-30bb-product-agent`** (`agents/modern_30bb_product_agent.md`): Subagente de Plataforma, Wedge, Expansão e Precificação (Pilares 2 e 3: Seções IV a XIII).
-- **`modern-30bb-gtm-agent`** (`agents/modern_30bb_gtm_agent.md`): Subagente de Go-To-Market Enterprise, CRM de 14 etapas e CS Escalável (Pilar 7: Seções XXIV a XXVII).
-- **`modern-30bb-governance-agent`** (`agents/modern_30bb_governance_agent.md`): Subagente de Blindagem Societária 100% IP, Acordo de Acionistas, SDLC Zero-Forks e Compliance (Pilares 5 e 6: Seções XVI a XXIII).
-- **`modern-30bb-finance-agent`** (`agents/modern_30bb_finance_agent.md`): Subagente de DRE Gerencial, Painel de KPIs, Financiamento por 4 Gates e Moat (Pilar 8: Seções XXVIII a XXX).
-
-### 3. As 6 Skills Especializadas (`skills/`)
-
-1. **`modern-30bb-orchestrator`**:
-   - Orquestrador mestre ponta a ponta para transformar qualquer ideia de negócio nas 30 Seções Mestras (I a XXX).
-   - Inclui o template canônico completo em `resources/master-30bb-template.md`, a matriz de rastreabilidade dos 46 tópicos originais para as 30 seções em `references/architecture-map-30-sections.md`, e o validador automatizado em Python `scripts/validate_30bb_blueprint.py`.
-2. **`modern-30bb-thesis-and-brand`**:
-   - Especializada no **Pilar 1 (Seções I–III)** e **Pilar 4 (Seções XIV–XV)**.
-3. **`modern-30bb-product-and-expansion`**:
-   - Especializada no **Pilar 2 (Seções IV–XI)**.
-4. **`modern-30bb-monetization-and-gtm`**:
-   - Especializada no **Pilar 3 (Seções XII–XIII)** e **Pilar 7 (Seções XXIV–XXVII)**.
-5. **`modern-30bb-governance-ops-and-legal`**:
-   - Especializada no **Pilar 5 (Seções XVI–XVIII)** e **Pilar 6 (Seções XIX–XXIII)**.
-6. **`modern-30bb-economics-roadmap-and-moat`**:
-   - Especializada no **Pilar 8 (Seções XXVIII–XXX)**.
-
 ---
 
 ## Validação Automatizada de Blueprints
@@ -96,76 +69,87 @@ python3 ~/.gemini/config/plugins/modern-30bb-plugin/skills/modern-30bb-orchestra
 
 ---
 
-## Estrutura de Diretórios
+---
+
+## What's Included (Component Catalog)
+
+### Contextual Rules (`rules/`)
+Automatically loaded to govern and protect project contexts:
+- **[`modern-30bb-blueprint-standards.md`](rules/modern-30bb-blueprint-standards.md)**: >-
+
+### Procedural Skills (`skills/`)
+On-demand actionable workflows and runbooks:
+- **[`/modern-30bb-economics-roadmap-and-moat`](skills/modern-30bb-economics-roadmap-and-moat/SKILL.md)**: Use this skill when structuring or refining Pillar 8 (Sections XXVIII to XXX) of a Modern 30BB Business Blueprint: Managerial DRE (segregating Software Revenue from Data/Third-Party COGS & Gross Margin thermometer), 6-Dimension Partner KPI Panel, 4-Gate Risk-Reduction Funding Strategy (12-18m Runway), 5-Phase 18-Month Master Roadmap, Strategic Renunciations ("What We Will NOT Do"), Investment Thesis Flywheel, 8-Factor Cumulative Moat, and Corporate Manifesto.
+- **[`/modern-30bb-governance-ops-and-legal`](skills/modern-30bb-governance-ops-and-legal/SKILL.md)**: Use this skill when structuring or refining Pillar 5 (Sections XVI to XVIII: 100% Unencumbered IP Ownership, Technical Partner Governance, Anti-Ornamental Executive Governance & 10-Block Monthly Ritual, Month-0 Shareholders' Agreement) and Pillar 6 (Sections XIX to XXIII: Lean Org & Hybrid HQ, High-Performance Adult Culture, 10-Stage Anti-Customization SDLC, Cybersecurity Moat & 4-Front Legal Shield) of a Modern 30BB Business Blueprint.
+- **[`/modern-30bb-monetization-and-gtm`](skills/modern-30bb-monetization-and-gtm/SKILL.md)**: Use this skill when structuring or refining Pillar 3 (Sections XII and XIII: 6-Component Revenue & Pricing Model, Dual Commercial Packaging — Continuous Monitoring vs. Transactional API Decisioning) and Pillar 7 (Sections XXIV to XXVII: Aggregator-First Enterprise ICP, 50 Target Accounts, 14-Stage CRM Sales Funnel, 3 Distribution Waves, Thought Leadership & Scalable CS) of a Modern 30BB Business Blueprint.
+- **[`/modern-30bb-orchestrator`](skills/modern-30bb-orchestrator/SKILL.md)**: Use this skill when the user asks to create, generate, structure, expand, or audit a complete Master Business Blueprint ("Plano Mestre da Nova Companhia") from a new business idea, startup pitch, or strategic thesis using the 30 Master Sections (I to XXX) across 8 Strategic Pillars (framework 30BB).
+- **[`/modern-30bb-product-and-expansion`](skills/modern-30bb-product-and-expansion/SKILL.md)**: Use this skill when designing or refining Pillar 2 (Sections IV to XI) of a Modern 30BB Business Blueprint: Horizontal Core Platform Architecture (6 layers), Beachhead Market Selection & TAM/SAM/SOM Sizing, Product 1 (Wedge Product), Technical Ecosystem Limits & Operational Risk Mitigation, Vertical Land & Expand (Modules 2-6), Horizontal Expansion across New Industries, Cascading Cost Optimization Engine & Customer ROI Equation, and Long-Term Marketplace Vision.
+- **[`/modern-30bb-thesis-and-brand`](skills/modern-30bb-thesis-and-brand/SKILL.md)**: Use this skill when structuring or refining Pillar 1 (Sections I to III: Central Thesis, Market Gap, Corporate Identity, Anti-Positioning, Category Design, True Economic Object & Company Mantra) and Pillar 4 (Sections XIV and XV: Brand Principles, Horizontal Semantic Restrictions, Naming Territories, Elevator Pitch & Taglines) of a Modern 30BB Business Blueprint.
+
+### Specialized Subagents (`agents/`)
+Autonomous personas delegated for in-depth execution:
+- **[`modern_30bb_architect_agent`](agents/modern_30bb_architect_agent.md)**: Arquiteto Estrategista Líder (Lead Business Blueprint Architect & Master Orchestrator) especializado em liderar a construção do Plano Mestre da Nova Companhia (Master Business Blueprint) estruturado rigorosamente nas 30 Seções Mestras (I a XXX) e 8 Pilares Estratégicos do framework 30BB, orquestrando subagentes especialistas via pipeline em fases (Staged Handoff).
+- **[`modern_30bb_finance_agent`](agents/modern_30bb_finance_agent.md)**: Subagente Especialista em DRE Gerencial, Financiamento por Gates, Roadmap de 18 Meses, Moat e Manifesto (Pilar 8). Responsável por modelar a DRE segregada (Software vs. Repasse de Terceiros), o painel de KPIs em 6 dimensões, a estratégia de 4 Gates de capital, o Master Roadmap M0-M18, Renúncias Estratégicas, Fosso Competitivo e Manifesto (Seções XXVIII a XXX).
+- **[`modern_30bb_governance_agent`](agents/modern_30bb_governance_agent.md)**: Subagente Especialista em Blindagem Societária, Governança, Cultura, SDLC Anti-Customização e Cibersegurança (Pilar 5 e Pilar 6). Responsável por definir a titularidade 100% de IP, governança de parceiros técnicos, Acordo de Acionistas, organograma enxuto, esteira SDLC de 10 etapas, cibersegurança e compliance (Seções XVI a XXIII).
+- **[`modern_30bb_gtm_agent`](agents/modern_30bb_gtm_agent.md)**: Subagente Especialista em Go-To-Market Enterprise, Estratégia Comercial e Sucesso do Cliente (Pilar 7). Responsável por mapear o ICP inicial de agregadores, listar as 50 contas-alvo, estruturar o funil de CRM de 14 etapas, as 3 ondas de distribuição, autoridade executiva e CS escalável (Seções XXIV a XXVII).
+- **[`modern_30bb_product_agent`](agents/modern_30bb_product_agent.md)**: Subagente Especialista em Plataforma Horizontal, Beachhead, Wedge, Expansão e Modelo de Monetização (Pilar 2 e Pilar 3). Responsável por definir a Core Platform de 6 camadas, o dimensionamento TAM/SAM/SOM, o Produto 1 (Wedge), Land & Expand, Calculadora de ROI, Precificação em 6 Linhas e Empacotamento MaaS vs DaaS (Seções IV a XIII).
+- **[`modern_30bb_thesis_agent`](agents/modern_30bb_thesis_agent.md)**: Subagente Estrategista de Tese, Categoria e Naming Corporativo (Pilar 1 e Pilar 4). Responsável por definir o Paradoxo do Mercado, a Matriz do Status Quo, o Antiposicionamento, a Cadeia de Valor de 6 etapas, o Verdadeiro Objeto Econômico, o Mantra e o Naming Institucional (Seções I a III e XIV a XV).
+
+---
+
+## Directory Hierarchy
 
 ```text
 modern-30bb-plugin/
-├── plugin.json
-├── installed_version.json
-├── README.md
-├── LICENSE
-├── .gitignore
-├── .gitattributes
-├── .claude-plugin/
-│   └── plugin.json
-├── claude/
-│   └── skills/
-│       └── modern-30bb-blueprint-standards/
-│           └── SKILL.md
+├── plugin.json              # Official Antigravity manifest (schema v1)
+├── LICENSE                  # MIT License (Copyright 2026 HalcyonTech LTDA)
+├── .gitignore               # System ignores & installed_version.json exclusions
+├── .gitattributes           # Deterministic line endings (* text=auto eol=lf)
+├── README.md                # Golden Standard documentation & runbook
 ├── assets/
-│   └── logo.svg
-├── agents/
-│   ├── modern_30bb_architect_agent.md
-│   ├── modern_30bb_thesis_agent.md
-│   ├── modern_30bb_product_agent.md
-│   ├── modern_30bb_gtm_agent.md
-│   ├── modern_30bb_governance_agent.md
-│   └── modern_30bb_finance_agent.md
-├── rules/
+│   └── logo.svg             # Official Halcyon Tech corporate vector symbol
+├── rules/                   # Contextual rules discovered automatically
 │   └── modern-30bb-blueprint-standards.md
-└── skills/
-    ├── modern-30bb-orchestrator/
-    │   ├── SKILL.md
-    │   ├── references/
-    │   │   └── architecture-map-30-sections.md
-    │   ├── resources/
-    │   │   └── master-30bb-template.md
-    │   └── scripts/
-    │       └── validate_30bb_blueprint.py
-    ├── modern-30bb-thesis-and-brand/
-    │   ├── SKILL.md
-    │   └── references/
-    │       └── thesis_category_and_naming_playbooks.md
-    ├── modern-30bb-product-and-expansion/
-    │   ├── SKILL.md
-    │   └── references/
-    │       └── platform_wedge_and_roi_engineering.md
-    ├── modern-30bb-monetization-and-gtm/
-    │   ├── SKILL.md
-    │   └── references/
-    │       └── pricing_packaging_and_enterprise_gtm.md
-    ├── modern-30bb-governance-ops-and-legal/
-    │   ├── SKILL.md
-    │   └── references/
-    │       └── corporate_shield_sdlc_and_legal_checklists.md
-    └── modern-30bb-economics-roadmap-and-moat/
-        ├── SKILL.md
-        └── references/
-            └── dre_kpis_gates_and_manifesto_guide.md
+├── skills/                  # Actionable procedural skills (Progressive Disclosure)
+│   └── modern-30bb-economics-roadmap-and-moat/
+│       └── SKILL.md
+│   └── modern-30bb-governance-ops-and-legal/
+│       └── SKILL.md
+│   └── modern-30bb-monetization-and-gtm/
+│       └── SKILL.md
+│   └── modern-30bb-orchestrator/
+│       └── SKILL.md
+│   └── modern-30bb-product-and-expansion/
+│       └── SKILL.md
+│   └── modern-30bb-thesis-and-brand/
+│       └── SKILL.md
+└── agents/                  # Specialized autonomous subagents
+    └── modern_30bb_architect_agent.md
+    └── modern_30bb_finance_agent.md
+    └── modern_30bb_governance_agent.md
+    └── modern_30bb_gtm_agent.md
+    └── modern_30bb_product_agent.md
+    └── modern_30bb_thesis_agent.md
 ```
-
 
 ---
 
 ## 💡 Prompt Recipes & Use Cases
 
 ```markdown
-- Crie um Master Business Blueprint completo nas 30 Seções Mestras (I a XXX) e 8 Pilares para a seguinte ideia de negócio:
-- Aplique o framework 30BB para transformar este rascunho em uma Tese de Investimento e Plano Mestre de Implantação de 18 meses
-- Estruture o Pilar 1 e Pilar 4 (Tese Central, Antiposicionamento, Categoria, Mantra e Naming) para uma nova plataforma B2B
-- Desenhe o Pilar 2 (Core Platform de 6 camadas, Beachhead TAM/SAM/SOM, Produto 1 Wedge, Land & Expand e Calculadora de ROI)
-- Modele o Pilar 3 e Pilar 7 (Precificação em 6 linhas, Empacotamento API/Monitoramento, ICP de 50 Contas, Funil de 14 etapas e CS Escalável)
-- Elabore o Pilar 5 e Pilar 6 (Blindagem 100% IP, Governança de 10 blocos, Acordo de Acionistas, SDLC Zero-Forks, Cibersegurança e Contratos)
-- Construa o Pilar 8 (DRE Gerencial Software vs. Repasse, Painel de KPIs, 4 Gates de Capital, Roadmap de 18 Meses, Moat e Manifesto)
-- Valide se o meu documento de Business Blueprint cumpre rigorosamente todas as 30 Seções Mestras do padrão 30BB
+- "Crie um Master Business Blueprint completo nas 30 Seções Mestras (I a XXX) e 8 Pilares para a seguinte ideia de negócio:"
+- "Aplique o framework 30BB para transformar este rascunho em uma Tese de Investimento e Plano Mestre de Implantação de 18 meses"
+- "Estruture o Pilar 1 e Pilar 4 (Tese Central, Antiposicionamento, Categoria, Mantra e Naming) para uma nova plataforma B2B"
+- "Desenhe o Pilar 2 (Core Platform de 6 camadas, Beachhead TAM/SAM/SOM, Produto 1 Wedge, Land & Expand e Calculadora de ROI)"
+- "Modele o Pilar 3 e Pilar 7 (Precificação em 6 linhas, Empacotamento API/Monitoramento, ICP de 50 Contas, Funil de 14 etapas e CS Escalável)"
+- "Elabore o Pilar 5 e Pilar 6 (Blindagem 100% IP, Governança de 10 blocos, Acordo de Acionistas, SDLC Zero-Forks, Cibersegurança e Contratos)"
+- "Construa o Pilar 8 (DRE Gerencial Software vs. Repasse, Painel de KPIs, 4 Gates de Capital, Roadmap de 18 Meses, Moat e Manifesto)"
+- "Valide se o meu documento de Business Blueprint cumpre rigorosamente todas as 30 Seções Mestras do padrão 30BB"
 ```
+
+---
+
+## 📄 License & Corporate Governance
+
+Distributed under the **MIT License**. Copyright (c) 2026 **HalcyonTech LTDA**.  
+Engineered with precision and excellence by [Halcyon Tech](https://github.com/HalcyonTech-LTDA).
