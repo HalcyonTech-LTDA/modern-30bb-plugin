@@ -153,3 +153,19 @@ modern-30bb-plugin/
         └── references/
             └── dre_kpis_gates_and_manifesto_guide.md
 ```
+
+
+---
+
+## 💡 Prompt Recipes & Use Cases
+
+```markdown
+- Crie um Master Business Blueprint completo nas 30 Seções Mestras (I a XXX) e 8 Pilares para a seguinte ideia de negócio:
+- Aplique o framework 30BB para transformar este rascunho em uma Tese de Investimento e Plano Mestre de Implantação de 18 meses
+- Estruture o Pilar 1 e Pilar 4 (Tese Central, Antiposicionamento, Categoria, Mantra e Naming) para uma nova plataforma B2B
+- Desenhe o Pilar 2 (Core Platform de 6 camadas, Beachhead TAM/SAM/SOM, Produto 1 Wedge, Land & Expand e Calculadora de ROI)
+- Modele o Pilar 3 e Pilar 7 (Precificação em 6 linhas, Empacotamento API/Monitoramento, ICP de 50 Contas, Funil de 14 etapas e CS Escalável)
+- Elabore o Pilar 5 e Pilar 6 (Blindagem 100% IP, Governança de 10 blocos, Acordo de Acionistas, SDLC Zero-Forks, Cibersegurança e Contratos)
+- Construa o Pilar 8 (DRE Gerencial Software vs. Repasse, Painel de KPIs, 4 Gates de Capital, Roadmap de 18 Meses, Moat e Manifesto)
+- Valide se o meu documento de Business Blueprint cumpre rigorosamente todas as 30 Seções Mestras do padrão 30BB
+```
